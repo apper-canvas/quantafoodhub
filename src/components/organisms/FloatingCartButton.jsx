@@ -7,7 +7,7 @@ const FloatingCartButton = ({ onClick }) => {
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
   const cartTotal = getCartTotal();
 
-  if (totalItems === 0) return null;
+// Always show cart button for accessibility
 
   return (
     <motion.button

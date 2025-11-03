@@ -71,4 +71,5 @@ const routes = [
   }
 ];
 
-export const router = createBrowserRouter(routes);
+const router = createBrowserRouter(routes);
+export default router;

@@ -68,7 +68,7 @@ const CartDrawer = ({ isOpen, onClose }) => {
                   </Button>
                 </div>
               ) : (
-                <div className="space-y-4">
+<div className="space-y-4">
                   {cartItems.map((item) => (
                     <div key={item.menuItemId} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
                       <img
@@ -81,8 +81,8 @@ const CartDrawer = ({ isOpen, onClose }) => {
                         <h4 className="font-medium text-gray-900 text-sm">
                           {item.name}
                         </h4>
-                        <p className="text-primary font-semibold text-sm">
-                          ₹{item.itemTotal}
+<p className="text-primary font-semibold text-sm">
+                          ₹{item.itemTotal || (item.price * (item.quantity || 1))}
                         </p>
                       </div>
                       
@@ -95,7 +95,7 @@ const CartDrawer = ({ isOpen, onClose }) => {
                         </button>
                         
                         <span className="w-8 text-center font-medium">
-                          {item.quantity}
+{item.quantity || 1}
                         </span>
                         
                         <button

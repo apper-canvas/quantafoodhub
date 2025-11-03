@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 export const useCart = () => {
   const [cartItems, setCartItems] = useState([]);
 
-  const addToCart = useCallback((item) => {
+const addToCart = useCallback((item) => {
     setCartItems(prevItems => {
       const existingItemIndex = prevItems.findIndex(
         cartItem => cartItem.menuItemId === item.menuItemId
@@ -12,7 +12,7 @@ export const useCart = () => {
 
       if (existingItemIndex > -1) {
         const updatedItems = [...prevItems];
-        updatedItems[existingItemIndex].quantity += item.quantity;
+updatedItems[existingItemIndex].quantity += (item.quantity || 1);
         updatedItems[existingItemIndex].itemTotal = 
           updatedItems[existingItemIndex].quantity * item.price;
         
@@ -23,12 +23,18 @@ export const useCart = () => {
         
         return updatedItems;
       } else {
-        toast.success(`Added ${item.name} to cart`, {
+toast.success(`Added ${item.name} to cart`, {
           position: "top-right",
           autoClose: 2000,
         });
         
-        return [...prevItems, item];
+        const newItem = {
+          ...item,
+          quantity: item.quantity || 1,
+          itemTotal: (item.quantity || 1) * item.price
+        };
+        
+        return [...prevItems, newItem];
       }
     });
   }, []);

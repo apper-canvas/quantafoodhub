@@ -14,16 +14,15 @@ const MenuItemCard = ({ menuItem, restaurantId }) => {
     if (menuItem.customizations && menuItem.customizations.length > 0) {
       setIsCustomizing(true);
     } else {
-      addToCart({
+addToCart({
         menuItemId: menuItem.Id,
         restaurantId,
-        quantity: 1,
-        selectedCustomizations: {},
-        specialInstructions: "",
-        itemTotal: menuItem.price,
         name: menuItem.name,
         image: menuItem.image,
         price: menuItem.price,
+        quantity: 1,
+        selectedCustomizations: {},
+        specialInstructions: ""
       });
     }
   };

@@ -82,7 +82,7 @@ const CartDrawer = ({ isOpen, onClose }) => {
                           {item.name}
                         </h4>
 <p className="text-primary font-semibold text-sm">
-                          ₹{item.itemTotal || (item.price * (item.quantity || 1))}
+                          ₹{item.itemTotal}
                         </p>
                       </div>
                       
@@ -95,7 +95,7 @@ onClick={() => updateQuantity(item.menuItemId, item.quantity - 1)}
                         </button>
                         
                         <span className="w-8 text-center font-medium">
-{item.quantity || 1}
+{item.quantity}
                         </span>
                         
                         <button

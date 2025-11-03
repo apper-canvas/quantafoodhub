@@ -69,7 +69,7 @@ const CartDrawer = ({ isOpen, onClose }) => {
                 </div>
               ) : (
 <div className="space-y-4">
-                  {cartItems.map((item) => (
+{cartItems.map((item) => (
                     <div key={item.menuItemId} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
                       <img
                         src={item.image}
@@ -88,7 +88,7 @@ const CartDrawer = ({ isOpen, onClose }) => {
                       
                       <div className="flex items-center gap-2">
                         <button
-                          onClick={() => updateQuantity(item.menuItemId, item.quantity - 1)}
+onClick={() => updateQuantity(item.menuItemId, item.quantity - 1)}
                           className="w-8 h-8 flex items-center justify-center bg-white border rounded-full hover:bg-gray-50"
                         >
                           <ApperIcon name="Minus" className="w-4 h-4" />
@@ -99,14 +99,14 @@ const CartDrawer = ({ isOpen, onClose }) => {
                         </span>
                         
                         <button
-                          onClick={() => updateQuantity(item.menuItemId, item.quantity + 1)}
+onClick={() => updateQuantity(item.menuItemId, item.quantity + 1)}
                           className="w-8 h-8 flex items-center justify-center bg-white border rounded-full hover:bg-gray-50"
                         >
                           <ApperIcon name="Plus" className="w-4 h-4" />
                         </button>
                         
                         <button
-                          onClick={() => removeFromCart(item.menuItemId)}
+onClick={() => removeFromCart(item.menuItemId)}
                           className="p-1 text-red-500 hover:bg-red-50 rounded"
                         >
                           <ApperIcon name="Trash2" className="w-4 h-4" />

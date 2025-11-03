@@ -225,7 +225,7 @@ const RestaurantPage = () => {
             <div className="space-y-4">
               {filteredMenuItems.map((menuItem, index) => (
                 <motion.div
-                  key={menuItem.Id}
+key={menuItem.Id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.05 }}

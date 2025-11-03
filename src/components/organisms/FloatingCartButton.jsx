@@ -4,7 +4,7 @@ import ApperIcon from "@/components/ApperIcon";
 
 const FloatingCartButton = ({ onClick }) => {
   const { cartItems, getCartTotal } = useCart();
-  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+const totalItems = cartItems.reduce((sum, item) => sum + (item.quantity || 0), 0);
   const cartTotal = getCartTotal();
 
 // Always show cart button for accessibility

@@ -6,7 +6,7 @@ export const useCart = () => {
 
 const addToCart = useCallback((item) => {
     setCartItems(prevItems => {
-      const existingItemIndex = prevItems.findIndex(
+const existingItemIndex = prevItems.findIndex(
         cartItem => cartItem.menuItemId === item.menuItemId
       );
 
@@ -28,8 +28,9 @@ toast.success(`Added ${item.name} to cart`, {
           autoClose: 2000,
         });
         
-        const newItem = {
+const newItem = {
           ...item,
+          menuItemId: item.menuItemId,
           quantity: item.quantity || 1,
           itemTotal: (item.quantity || 1) * item.price
         };
@@ -39,9 +40,9 @@ toast.success(`Added ${item.name} to cart`, {
     });
   }, []);
 
-  const removeFromCart = useCallback((menuItemId) => {
+const removeFromCart = useCallback((menuItemId) => {
     setCartItems(prevItems => {
-      const updatedItems = prevItems.filter(item => item.menuItemId !== menuItemId);
+const updatedItems = prevItems.filter(item => item.menuItemId !== menuItemId);
       toast.info("Item removed from cart", {
         position: "top-right",
         autoClose: 2000,
@@ -50,14 +51,14 @@ toast.success(`Added ${item.name} to cart`, {
     });
   }, []);
 
-  const updateQuantity = useCallback((menuItemId, newQuantity) => {
+const updateQuantity = useCallback((menuItemId, newQuantity) => {
     if (newQuantity <= 0) {
       removeFromCart(menuItemId);
       return;
     }
 
     setCartItems(prevItems => {
-      return prevItems.map(item => 
+return prevItems.map(item =>
         item.menuItemId === menuItemId
           ? { ...item, quantity: newQuantity, itemTotal: newQuantity * item.price }
           : item

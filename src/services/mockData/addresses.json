@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 1,
+    "label": "Home",
+    "street": "123 Main Street, Koramangala",
+    "city": "Bangalore",
+    "pincode": "560001",
+    "coordinates": { "lat": 12.9716, "lng": 77.5946 }
+  },
+  {
+    "Id": 2,
+    "label": "Office",
+    "street": "456 Tech Park, Whitefield",
+    "city": "Bangalore",
+    "pincode": "560037",
+    "coordinates": { "lat": 12.9698, "lng": 77.7500 }
+  },
+  {
+    "Id": 3,
+    "label": "Friend's Place",
+    "street": "789 Garden Street, HSR Layout",
+    "city": "Bangalore",
+    "pincode": "560102",
+    "coordinates": { "lat": 12.9082, "lng": 77.6476 }
+  }
+]

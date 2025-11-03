@@ -1,0 +1,112 @@
+[
+  {
+    "Id": 1,
+    "name": "The Pizza Corner",
+    "cuisineTypes": ["Italian", "Pizza", "Fast Food"],
+    "rating": 4.5,
+    "deliveryTime": "25-30 mins",
+    "minimumOrder": 199,
+    "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&h=300&fit=crop",
+    "isOpen": true,
+    "address": "Koramangala, Bangalore"
+  },
+  {
+    "Id": 2,
+    "name": "Burger Junction",
+    "cuisineTypes": ["American", "Burgers", "Fast Food"],
+    "rating": 4.2,
+    "deliveryTime": "20-25 mins",
+    "minimumOrder": 149,
+    "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=500&h=300&fit=crop",
+    "isOpen": true,
+    "address": "HSR Layout, Bangalore"
+  },
+  {
+    "Id": 3,
+    "name": "Spice Garden",
+    "cuisineTypes": ["Indian", "North Indian", "Biryani"],
+    "rating": 4.7,
+    "deliveryTime": "30-35 mins",
+    "minimumOrder": 249,
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=500&h=300&fit=crop",
+    "isOpen": true,
+    "address": "Indiranagar, Bangalore"
+  },
+  {
+    "Id": 4,
+    "name": "Dragon Palace",
+    "cuisineTypes": ["Chinese", "Asian", "Indo-Chinese"],
+    "rating": 4.3,
+    "deliveryTime": "25-30 mins",
+    "minimumOrder": 199,
+    "image": "https://images.unsplash.com/photo-1563379091339-03246963d29a?w=500&h=300&fit=crop",
+    "isOpen": true,
+    "address": "Whitefield, Bangalore"
+  },
+  {
+    "Id": 5,
+    "name": "Cafe Mocha",
+    "cuisineTypes": ["Cafe", "Continental", "Desserts"],
+    "rating": 4.4,
+    "deliveryTime": "20-25 mins",
+    "minimumOrder": 129,
+    "image": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=500&h=300&fit=crop",
+    "isOpen": false,
+    "address": "Electronic City, Bangalore"
+  },
+  {
+    "Id": 6,
+    "name": "Taco Bell",
+    "cuisineTypes": ["Mexican", "Fast Food", "Tex-Mex"],
+    "rating": 4.1,
+    "deliveryTime": "30-35 mins",
+    "minimumOrder": 179,
+    "image": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=500&h=300&fit=crop",
+    "isOpen": true,
+    "address": "Koramangala, Bangalore"
+  },
+  {
+    "Id": 7,
+    "name": "Sushi Zen",
+    "cuisineTypes": ["Japanese", "Sushi", "Asian"],
+    "rating": 4.6,
+    "deliveryTime": "35-40 mins",
+    "minimumOrder": 399,
+    "image": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=500&h=300&fit=crop",
+    "isOpen": true,
+    "address": "HSR Layout, Bangalore"
+  },
+  {
+    "Id": 8,
+    "name": "Dosa Delights",
+    "cuisineTypes": ["South Indian", "Breakfast", "Traditional"],
+    "rating": 4.5,
+    "deliveryTime": "20-25 mins",
+    "minimumOrder": 99,
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=500&h=300&fit=crop",
+    "isOpen": true,
+    "address": "Indiranagar, Bangalore"
+  },
+  {
+    "Id": 9,
+    "name": "BBQ Nation",
+    "cuisineTypes": ["BBQ", "Indian", "Grilled"],
+    "rating": 4.4,
+    "deliveryTime": "40-45 mins",
+    "minimumOrder": 499,
+    "image": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=500&h=300&fit=crop",
+    "isOpen": true,
+    "address": "Whitefield, Bangalore"
+  },
+  {
+    "Id": 10,
+    "name": "Ice Cream Factory",
+    "cuisineTypes": ["Desserts", "Ice Cream", "Sweets"],
+    "rating": 4.3,
+    "deliveryTime": "15-20 mins",
+    "minimumOrder": 79,
+    "image": "https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?w=500&h=300&fit=crop",
+    "isOpen": true,
+    "address": "Electronic City, Bangalore"
+  }
+]

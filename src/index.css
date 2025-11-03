@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* React Toastify Custom Styles */
+@import 'react-toastify/dist/ReactToastify.css';
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #F8F9FA;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Toast Container Overrides */
+.Toastify__toast-container {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+.Toastify__toast {
+  border-radius: 8px;
+  min-height: 48px;
+  padding: 12px 16px;
+}
+
+.Toastify__toast--success {
+  background: linear-gradient(135deg, #2ECC71 0%, #27AE60 100%);
+}
+
+.Toastify__toast--error {
+  background: linear-gradient(135deg, #E74C3C 0%, #C0392B 100%);
+}
+
+.Toastify__toast--info {
+  background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);
+}
+
+.Toastify__toast--warning {
+  background: linear-gradient(135deg, #F39C12 0%, #E67E22 100%);
+}
+
+/* Custom scrollbar for horizontal scrolling */
+.horizontal-scroll::-webkit-scrollbar {
+  height: 4px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  background: #E5E7EB;
+  border-radius: 2px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb:hover {
+  background: #D1D5DB;
+}
+
+/* Hide scrollbar for Firefox */
+.horizontal-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #E5E7EB transparent;
+}
+
+/* Custom animations */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Backdrop blur support */
+.backdrop-blur-custom {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}

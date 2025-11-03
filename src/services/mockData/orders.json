@@ -1,0 +1,94 @@
+[
+  {
+    "Id": 1,
+    "restaurantId": "1",
+    "items": [
+      {
+        "menuItemId": "1",
+        "name": "Margherita Pizza",
+        "quantity": 1,
+        "selectedCustomizations": {},
+        "specialInstructions": "",
+        "itemTotal": 299
+      },
+      {
+        "menuItemId": "3",
+        "name": "Garlic Bread",
+        "quantity": 1,
+        "selectedCustomizations": {},
+        "specialInstructions": "",
+        "itemTotal": 149
+      }
+    ],
+    "deliveryAddress": {
+      "id": "1",
+      "label": "Home",
+      "street": "123 Main Street",
+      "city": "Bangalore",
+      "pincode": "560001",
+      "coordinates": { "lat": 12.9716, "lng": 77.5946 }
+    },
+    "status": "out_for_delivery",
+    "subtotal": 448,
+    "deliveryFee": 40,
+    "total": 488,
+    "orderTime": 1703232000000,
+    "estimatedDelivery": 1703233800000
+  },
+  {
+    "Id": 2,
+    "restaurantId": "2",
+    "items": [
+      {
+        "menuItemId": "4",
+        "name": "Classic Beef Burger",
+        "quantity": 2,
+        "selectedCustomizations": {},
+        "specialInstructions": "Extra cheese please",
+        "itemTotal": 498
+      }
+    ],
+    "deliveryAddress": {
+      "id": "2",
+      "label": "Office",
+      "street": "456 Tech Park",
+      "city": "Bangalore",
+      "pincode": "560037",
+      "coordinates": { "lat": 12.9698, "lng": 77.7500 }
+    },
+    "status": "delivered",
+    "subtotal": 498,
+    "deliveryFee": 40,
+    "total": 538,
+    "orderTime": 1703145600000,
+    "estimatedDelivery": 1703147400000
+  },
+  {
+    "Id": 3,
+    "restaurantId": "3",
+    "items": [
+      {
+        "menuItemId": "7",
+        "name": "Chicken Biryani",
+        "quantity": 1,
+        "selectedCustomizations": {},
+        "specialInstructions": "",
+        "itemTotal": 349
+      }
+    ],
+    "deliveryAddress": {
+      "id": "1",
+      "label": "Home",
+      "street": "123 Main Street",
+      "city": "Bangalore",
+      "pincode": "560001",
+      "coordinates": { "lat": 12.9716, "lng": 77.5946 }
+    },
+    "status": "preparing",
+    "subtotal": 349,
+    "deliveryFee": 40,
+    "total": 389,
+    "orderTime": 1703318400000,
+    "estimatedDelivery": 1703320200000
+  }
+]

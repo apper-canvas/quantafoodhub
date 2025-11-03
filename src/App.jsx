@@ -1,15 +1,42 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import React, { useState } from "react";
 import HomePage from "@/components/pages/HomePage";
-import SearchPage from "@/components/pages/SearchPage";
-import RestaurantPage from "@/components/pages/RestaurantPage";
-import OrdersPage from "@/components/pages/OrdersPage";
-import AccountPage from "@/components/pages/AccountPage";
 import CheckoutPage from "@/components/pages/CheckoutPage";
+import AccountPage from "@/components/pages/AccountPage";
+import SearchPage from "@/components/pages/SearchPage";
+import OrdersPage from "@/components/pages/OrdersPage";
+import RestaurantPage from "@/components/pages/RestaurantPage";
 import BottomNavigation from "@/components/organisms/BottomNavigation";
-import CartDrawer from "@/components/organisms/CartDrawer";
 import FloatingCartButton from "@/components/organisms/FloatingCartButton";
-import { useState } from "react";
+import CartDrawer from "@/components/organisms/CartDrawer";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+  },
+  {
+    path: "/search",
+    element: <SearchPage />,
+  },
+  {
+    path: "/restaurant/:id",
+    element: <RestaurantPage />,
+  },
+  {
+    path: "/checkout",
+    element: <CheckoutPage />,
+  },
+  {
+    path: "/orders",
+    element: <OrdersPage />,
+  },
+  {
+    path: "/account",
+    element: <AccountPage />,
+  },
+]);
 
 function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -23,42 +50,13 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
-      <div className="min-h-screen bg-background">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/search" element={<SearchPage />} />
-          <Route path="/restaurant/:id" element={<RestaurantPage />} />
-          <Route path="/orders" element={<OrdersPage />} />
-          <Route path="/account" element={<AccountPage />} />
-          <Route path="/checkout" element={<CheckoutPage />} />
-        </Routes>
-
-        {/* Bottom Navigation */}
-        <BottomNavigation />
-
-        {/* Floating Cart Button */}
-        <FloatingCartButton onClick={handleOpenCart} />
-
-        {/* Cart Drawer */}
-        <CartDrawer isOpen={isCartOpen} onClose={handleCloseCart} />
-
-        {/* Toast Container */}
-        <ToastContainer
-          position="top-right"
-          autoClose={3000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="light"
-          style={{ zIndex: 9999 }}
-        />
-      </div>
-    </BrowserRouter>
+    <div className="min-h-screen bg-gray-50">
+      <RouterProvider router={router} />
+      <BottomNavigation />
+      <FloatingCartButton onOpenCart={handleOpenCart} />
+      <CartDrawer isOpen={isCartOpen} onClose={handleCloseCart} />
+      <ToastContainer />
+    </div>
   );
 }
 
